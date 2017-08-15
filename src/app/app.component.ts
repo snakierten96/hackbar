@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  scrolling = false;
+  
+  @HostListener('window:scroll',['$event']) onScroll($event) {
+    //console.log(window.scrollY);
+    if ( window.scrollY === 0 ) {
+      this.scrolling = false;
+    } else {
+      this.scrolling = true;
+    }
+  }
 }

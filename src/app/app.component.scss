@@ -1,0 +1,18 @@
+@import '../variables';
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  
+  &.scrolling {
+    @include mat-elevation(3);
+  }
+  
+}
+
+.content.main {
+  height: 1000px;
+}
