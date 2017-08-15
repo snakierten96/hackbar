@@ -2,7 +2,15 @@
   <button md-icon-button>
     <md-icon>menu</md-icon>
   </button>
-  
+  <nav md-tab-nav-bar>
+    <a md-tab-link *ngFor="let item of navItems"
+      [routerLink]="item.path"
+      [routerLinkActiveOptions]="{ exact: item.name === 'Home' }"
+      routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+      {{ item.name }}
+    </a>
+  </nav>
 </md-toolbar>
 <div class="container content main mat-typography">
   <router-outlet></router-outlet>  
