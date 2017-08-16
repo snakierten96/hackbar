@@ -7,7 +7,8 @@ import {
   MdButtonModule,
   MdIconModule,
   MdListModule,
-  MdTabsModule
+  MdTabsModule,
+  MdInputModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,7 @@ import { UsersModule } from './users';
     MdIconModule,
     MdListModule,
     MdTabsModule,
+    MdInputModule,
     AppRoutingModule,
     HomeModule,
     QuestionsModule,

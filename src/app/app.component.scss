@@ -2,6 +2,13 @@
 
 $bar-height: 64px;
 
+.container {
+  margin: auto;
+  max-width: 1028px;
+}
+
+
+
 .topbar {
   position: fixed;
   top: 0;
@@ -12,7 +19,12 @@ $bar-height: 64px;
   &.scrolling {
     @include mat-elevation(3);
   }
-  
+
+  .mat-toolbar-layout {
+    margin: auto;
+    min-width: 1028px;
+  }
+
   .mat-tab-nav-bar {
     height: $bar-height;
     border-bottom: none;
