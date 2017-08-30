@@ -8,7 +8,8 @@ import {
   MdIconModule,
   MdListModule,
   MdTabsModule,
-  MdInputModule
+  MdInputModule,
+  MdProgressBarModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { UsersModule } from './users';
     MdListModule,
     MdTabsModule,
     MdInputModule,
+    MdProgressBarModule,
     AppRoutingModule,
     HomeModule,
     QuestionsModule,

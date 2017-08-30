@@ -6,12 +6,13 @@ import { NAVITEMS } from './app.navigation';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  //encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   title = 'app';
   scrolling = false;
   navItems = NAVITEMS;
+  progressMode = 'determinate';
   
   @HostListener('window:scroll',['$event']) onScroll($event) {
     //console.log(window.scrollY);

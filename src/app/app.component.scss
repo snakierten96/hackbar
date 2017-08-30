@@ -7,7 +7,15 @@ $bar-height: 64px;
   max-width: 1028px;
 }
 
-
+.mat-progress-bar.fixedtop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  &.inkline {
+    height: 3px;
+  }
+}
 
 .topbar {
   position: fixed;
@@ -15,12 +23,13 @@ $bar-height: 64px;
   left: 0;
   width: 100%;
   border-bottom: 1px solid rgba(0,0,0,.12);
+  transition: box-shadow .2s ease-in-out;
   
   &.scrolling {
     @include mat-elevation(3);
   }
 
-  .mat-toolbar-layout {
+  ::ng-deep .mat-toolbar-layout {
     margin: auto;
     min-width: 1028px;
   }

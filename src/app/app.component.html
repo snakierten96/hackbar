@@ -1,17 +1,18 @@
 <md-toolbar color="accent" class="topbar" [class.scrolling]="scrolling">
-  <button md-icon-button>
-    <md-icon>menu</md-icon>
-  </button>
-  <nav md-tab-nav-bar>
-    <a md-tab-link *ngFor="let item of navItems"
-      [routerLink]="item.path"
-      [routerLinkActiveOptions]="{ exact: item.name === 'Home' }"
-      routerLinkActive #rla="routerLinkActive"
-      [active]="rla.isActive">
-      {{ item.name }}
-    </a>
-  </nav>
+    <button md-icon-button>
+      <md-icon>menu</md-icon>
+    </button>
+    <nav md-tab-nav-bar>
+      <a md-tab-link *ngFor="let item of navItems"
+        [routerLink]="item.path"
+        [routerLinkActiveOptions]="{ exact: item.name === 'Home' }"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        {{ item.name }}
+      </a>
+    </nav>
 </md-toolbar>
+<md-progress-bar class="fixedtop inkline" [mode]="progressMode" value="100"></md-progress-bar>
 <div class="container content main mat-typography">
   <router-outlet></router-outlet>  
 </div>
